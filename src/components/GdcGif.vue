@@ -77,6 +77,9 @@ import DollarIcon from "@/assets/icons/dollar.svg";
   10% {
     transform: translateY(-15px);
   }
+  11% {
+    transform: translateY(-5px);
+  }
   12.2% {
     transform: translateY(5px);
   }
