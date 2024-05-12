@@ -1,144 +1,128 @@
 <template>
-  <div class="row-1 h-full bg-white gdc-container">
-    <div
-      class="flex justify-end md:justify-between items-end h-full py-[14px] md:py-[30px] gap-10 md:gap-20 flex-col md:flex-row"
-    >
-      <div class="left self-start md:self-end">
-        <p class="text-black uppercase">Hello, I'm</p>
-        <img
-          :src="NameIcon"
-          alt="nino lekveishvili sign"
-          class="max-w-[80%] md:w-auto"
-        />
-        <div class="flex flex-row md:flex-col items-center md:items-start">
-          <p
-            class="text-black text-[20px] md:text-lg uppercase leading-[0.8] whitespace-nowrap"
-          >
-            Art director &nbsp;
-          </p>
-          <p class="text-black uppercase">from tbilisi, georgia</p>
-        </div>
+  <div class="gdc-container h-full flex flex-col justify-center items-center bg-color-animation">
+    <div class="w-full sm:w-[580px]">
+      <div class="text-div">
+        <div class="hidden sm:block" v-html="desktopText1"></div>
+        <div class="sm:hidden" v-html="mobileText1"></div>
       </div>
-      <div class="w-full md:w-auto right relative">
-        <div
-          class="bg-red absolute p-[12.7%] rounded-full left-[32px] top-[-40px]"
-        ></div>
-        <img :src="NinoPhoto" alt="nino" class="w-full md:w-auto" />
+      <gdc-gif/>
+      <div class="text-div">
+        <div class="hidden sm:block" v-html="desktopText2"></div>
+        <div class="sm:hidden" v-html="mobileText2"></div>
       </div>
-    </div>
-  </div>
-  <div class="row-1 h-full bg-grey flex items-center justify-center">
-    <div
-      class="max-w-none sm:max-w-[60%] lg:max-w-[840px] text-center leading-[0.8] flex sm:block flex-col items-center gap-0 sm:gap-2"
-    >
-      <div
-        v-for="characteristic in characteristics"
-        :key="characteristic"
-        class="sm:inline-block items-center ml-1"
-      >
-        <div class="flex items-center">
-          <div class="circle">•</div>
-          <span class="leading-none uppercase font-regular text-black">
-            {{ characteristic }}
-          </span>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row-2 h-full bg-white relative overflow-x-hidden">
-    <div
-      class="stripes-container flex gdc-container sm:px-0 justify-between sm:justify-evenly h-full"
-    >
-      <div
-        v-for="n in 8"
-        :key="n"
-        class="w-[30px] h-full bg-cyan"
-        :class="n > 4 ? 'hidden sm:block' : ''"
-      ></div>
-    </div>
-    <div
-      class="video-container absolute-center overflow-hidden w-[615px] pointer-events-none"
-    >
-      <div ref="youtube"></div>
-      <!--      <iframe-->
-      <!--        src="https://www.youtube.com/embed/rERiOu14jeA?controls=0&autoplay=1&loop=1&mute=1&showinfo=0&nologo=1&fs=0&rel=0&modestbranding=1&playlist=rERiOu14jeA"-->
-      <!--        title="YouTube video player"-->
-      <!--        frameborder="0"-->
-      <!--        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"-->
-      <!--        allowfullscreen-->
-      <!--      ></iframe>-->
     </div>
   </div>
 </template>
 
-<script setup>
-import { usePlayer } from "@vue-youtube/core";
-import { ref } from "vue";
-
-const videoId = ref("rERiOu14jeA");
-const youtube = ref();
-
-const { onReady, onStateChange, togglePlay } = usePlayer(videoId, youtube, {
-  cookie: false,
-  allow: "autoplay",
-  playerVars: {
-    fs: 0,
-    modestbranding: 1,
-    rel: 0,
-    nologo: 1,
-    controls: 0,
-    autoplay: 1,
-    mute: 1,
-    showinfo: 0,
-  },
-});
-
-onReady((event) => {
-  togglePlay();
-  event.target.playVideo();
-});
-onStateChange((event) => {
-  event.target.playVideo();
-});
+<script setup lang="ts">
+import GdcGif from "@/components/GdcGif.vue";
 </script>
 
-<script>
-import { defineComponent } from "vue";
-import { mapState } from "pinia";
-import { HomeStore } from "@/stores/homeStore";
-import NameIcon from "@/assets/images/nino_lekveishvili.svg";
-import NinoPhoto from "@/assets/images/nino.png";
-
-export default defineComponent({
-  name: "HomeView",
-
-  data: () => ({ NameIcon, NinoPhoto }),
-  methods: {},
-  computed: {
-    ...mapState(HomeStore, ["characteristics"]),
+<script lang="ts">
+export default {
+  name: 'HomeView',
+  data() {
+    return {
+      desktopText1: "------------------------------------------------------------------------------------------------------------------ I'm building this page. Come back soon. ----------------- ------------------------------------------------------------------------------------------------------------------ AND DON'T WORRY. ---------------------------------------- I'M A LEGIT HUMAN BEING THAT DID STUFF IN REAL LIFE. ---- ------------------------------------------------------------------------------------------------------------------",
+      desktopText2: "------------------------------------------------------------------------------------------------------------------ YOU CAN SEE SOME STUFF ON ----------------------------------------------------  <a class=\"link\" href=\"\">instagram</a>  ------------------------------------------------------------------------------------------------------------------------------------------------------ Or you can check me out on  <a class=\"link\" href=\"\">linkedin</a>  ----- ----------------------- If you're serious like that. ---- ---------------------------------------------------------",
+      mobileText1: "-------------------------------------------\n" +
+        "-------------------------------------------\n" +
+        "I'm building this page. Come back soon. --- ------------------------------------------- -------------------------------------------\n" +
+        "AND DON'T WORRY. I'M A LEGIT HUMAN BEING --\n" +
+        "THAT DID STUFF IN REAL LIFE.---------------\n" +
+        "-------------------------------------------\n" +
+        "-------------------------------------------",
+      mobileText2: "-------------------------------------------\n" +
+        "-------------------------------------------\n" +
+        "YOU CAN SEE SOME STUFF ON -----------------\n" +
+        "---------------------  <a class=\"link\" href=\"\">instagram</a>  ---------\n" +
+        "-------------------------------------------\n" +
+        "-------------------------------------------\n" +
+        "Or you can check me out on  <a class=\"link\" href=\"\">linkedin</a>  -----\n" +
+        "--------- If you're serious like that. ---- -------------------------------------------",
+    }
   },
-});
+};
 </script>
 
-<style scoped>
-.circle {
-  @apply relative inline-block leading-[0.5] w-[24px] h-[24px] inline-block rounded-full text-center text-black text-[22px] py-[4px] border-black border-[1.8px];
-}
-</style>
-
-<style>
-.video-container {
-  aspect-ratio: 16/9;
+<style lang="scss">
+.text-div {
+  @apply uppercase font-bold text-[18px];
+  letter-spacing: -0.7px;
+  line-height: 1.12;
 }
 
-@media screen and (max-width: 800px) {
-  .video-container {
-    width: calc(100% - 28px);
+.link {
+  @apply bg-black text-white px-[10.3px] py-[1px] rounded-[4px] md:hover:text-orange;
+}
+
+.bg-color-animation {
+  animation: bg-color-animation 11s ease infinite;
+}
+
+@keyframes bg-color-animation {
+  0%, 85.6% {
+    @apply bg-white;
+  }
+
+  85.7% {
+    @apply bg-orange;
+  }
+  86.7% {
+    @apply bg-blue;
+  }
+  87.7% {
+    @apply bg-orange;
+  }
+  88.7% {
+    @apply bg-green;
+  }
+  89.7% {
+    @apply bg-orange;
+  }
+  90.7% {
+    @apply bg-white;
+  }
+  91.7% {
+    @apply bg-blue;
+  }
+  // switch2
+  92.7% {
+    @apply bg-orange;
+  }
+  93.7% {
+    @apply bg-green;
+  }
+  94.7% {
+    @apply bg-orange;
+  }
+  95.7% {
+    @apply bg-white;
+  }
+  96.7% {
+    @apply bg-blue;
+  }
+  //switch3
+  97.7% {
+    @apply bg-orange;
+  }
+  98.7% {
+    @apply bg-green;
+  }
+  100% {
+    @apply bg-orange;
   }
 }
-iframe {
-  width: 300%;
-  height: 100%;
-  margin-left: -100%;
+
+@media screen and (max-width: 639px) {
+  .text-div {
+    letter-spacing: -0.1vw;
+    font-size: 3.5vw;
+  }
+
+  .link {
+    @apply px-[2.3vw];
+  }
 }
 </style>
+
