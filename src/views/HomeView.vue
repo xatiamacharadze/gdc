@@ -11,11 +11,16 @@
         <div class="sm:hidden" v-html="mobileText2"></div>
       </div>
     </div>
+
+    <audio class="hidden" ref="audio" controls loop>
+      <source :src="AudioFile" type="audio/mpeg">
+    </audio>
   </div>
 </template>
 
 <script setup lang="ts">
 import GdcGif from "@/components/GdcGif.vue";
+import AudioFile from "@/assets/schumann.mp3";
 </script>
 
 <script lang="ts">
@@ -42,7 +47,11 @@ export default {
         "--------- If you're serious like that. ---- -------------------------------------------",
     }
   },
+  mounted() {
+    this.$refs.audio.play()
+  }
 };
+
 </script>
 
 <style lang="scss">
