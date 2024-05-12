@@ -5,12 +5,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        black: "#272727",
-        red: "#E24848",
-        pink: "#DBACFF",
-        green: "#008F64",
-        cyan: "#7DCDFA",
-        grey: "#DAE5E8",
+        black: "#1F1F1F",
+        orange: "#DC6D46",
+        blue: "#387FC6",
+        green: "#44995E",
       },
       screens: {
         xs: "431px",
@@ -23,12 +21,9 @@ module.exports = {
     },
     fontFamily: {
       regular: ["Neue Montreal"],
-      medium: ["Neue Montreal Medium"],
-      bold: ["Neue Montreal Bold"],
     },
     fontSize: {
-      sm: "30px",
-      lg: "6.25vw",
+      md: "18px",
     },
   },
   variants: {
