@@ -48,7 +48,15 @@ export default {
     }
   },
   mounted() {
-    this.$refs.audio.play()
+    const tryToPlay = setInterval(() => {
+      this.$refs.audio.play()
+        .then(() => {
+          clearInterval(tryToPlay);
+        })
+        .catch(error => {
+          console.info('User has not interacted with document yet.');
+        });
+    }, 1000);
   }
 };
 
