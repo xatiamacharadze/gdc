@@ -1,37 +1,5 @@
-$black: #272727;
-$cyan: #7DCDFA;
-$pink: #DBACFF;
-$red: #e24848;
-$green: #008F64;
-$grey: #DAE5E8;
-
-@media screen and (min-width: 800px) {
-  .hover-green:hover span {
-    color: $green !important;
-  }
-  .hover-red:hover span {
-    color: $red !important;
-  }
-  .hover-pink:hover span {
-    color: $pink !important;
-  }
-  .hover-cyan:hover span {
-    color: $cyan !important;
-  }
-}
-
-
-.router-link-active {
-  &.hover-green span {
-    color: $green !important;
-  }
-  &.hover-red span {
-    color: $red !important;
-  }
-  &.hover-pink span {
-    color: $pink !important;
-  }
-  //&.hover-cyan span {
-  //  color: $cyan !important;
-  //}
-}
+$black: #1F1F1F;
+$white: #D9D9D9;
+$orange: #DC6D46;
+$blue: #387FC6;
+$green: #44995E;
