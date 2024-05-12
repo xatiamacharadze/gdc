@@ -77,39 +77,44 @@ import DollarIcon from "@/assets/icons/dollar.svg";
   10% {
     transform: translateY(-15px);
   }
-  11%{
-    visibility: hidden;
+  12.2% {
+    transform: translateY(5px);
   }
-  11.3% {
-    transform: translateY(10px);
-    visibility: hidden;
-  }
-  100% {
-    transform: translateY(0px);
+  12.3%, 100% {
+    transform: translateY(5px);
     visibility: hidden;
   }
 }
 
 .bounce2 {
-  animation: bounce2 11s ease infinite;
+  animation: bounce2 11s infinite;
 }
 
 @keyframes bounce2 {
-  0%, 11.3% {
+  0%, 12.3% {
     transform: translateY(5px);
     visibility: hidden;
   }
-  15% {
+  12.4% {
+    transform: translateY(8px);
+    visibility: visible;
+  }
+  14% {
     transform: translateY(15px);
+    visibility: visible;
+  }
+
+  15% {
+    transform: translateY(0);
     visibility: visible;
   }
 
   20% {
-    transform: translateY(15px);
+    transform: translateY(0);
     visibility: visible;
   }
   20.3%, 100% {
-    transform: translateY(0);
+    transform: translateY(5px);
     visibility: hidden;
   }
 }
@@ -123,7 +128,7 @@ import DollarIcon from "@/assets/icons/dollar.svg";
     transform: translateY(5px);
     visibility: hidden;
   }
-  21% {
+  22% {
     transform: translateY(15px);
     visibility: visible;
   }
