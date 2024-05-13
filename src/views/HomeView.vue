@@ -3,12 +3,12 @@
     <div class="w-full sm:w-[580px]">
       <div class="text-div">
         <div class="hidden sm:block" v-html="desktopText1"></div>
-        <div class="sm:hidden" v-html="mobileText1"></div>
+        <div class="sm:hidden whitespace-nowrap" v-html="mobileText1"></div>
       </div>
       <gdc-gif/>
       <div class="text-div">
         <div class="hidden sm:block" v-html="desktopText2"></div>
-        <div class="sm:hidden" v-html="mobileText2"></div>
+        <div class="sm:hidden whitespace-nowrap" v-html="mobileText2"></div>
       </div>
     </div>
 
@@ -153,8 +153,10 @@ export default {
 
 @media screen and (max-width: 639px) {
   .text-div {
+    //letter-spacing: -0.2vw;
+    //font-size: 3.7vw;
     letter-spacing: -0.2vw;
-    font-size: 3.7vw;
+    font-size: 3.74vw;
   }
 
   .link {
