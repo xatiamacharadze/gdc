@@ -6,9 +6,9 @@ module.exports = {
     extend: {
       colors: {
         black: "#1F1F1F",
-        orange: "#DC6D46",
-        blue: "#387FC6",
-        green: "#44995E",
+        orange: "#EC6539",
+        blue: "#0081CC",
+        green: "#006F48",
       },
       screens: {
         xs: "431px",
