@@ -41,7 +41,7 @@ import WatermelonIcon from "@/assets/icons/watermelon.svg";
 import DollarIcon from "@/assets/icons/dollar.svg";
 </script>
 
-<style>
+<style lang="scss">
 .middle {
   position: relative;
   &:before {
