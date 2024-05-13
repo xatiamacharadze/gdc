@@ -64,251 +64,573 @@ import DollarIcon from "@/assets/icons/dollar.svg";
     @apply absolute w-full top-0 left-0;
   }
 }
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 
 .bounce1 {
+  -webkit-animation: bounce1 11s ease infinite;
   animation: bounce1 11s ease infinite;
 }
 
-@keyframes bounce1 {
+@-webkit-keyframes bounce1 {
   0%, 9.4% {
+    -webkit-transform: translateY(0);
     transform: translateY(0);
     visibility: visible;
   }
   10% {
+    -webkit-transform: translateY(-15px);
     transform: translateY(-15px);
   }
   11% {
+    -webkit-transform: translateY(-5px);
     transform: translateY(-5px);
   }
   12.2% {
+    -webkit-transform: translateY(5px);
     transform: translateY(5px);
   }
   12.3%, 100% {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+    visibility: hidden;
+  }
+}
+
+@keyframes bounce1 {
+  0%, 9.4% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    visibility: visible;
+  }
+  10% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+  11% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+  12.2% {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+  }
+  12.3%, 100% {
+    -webkit-transform: translateY(5px);
     transform: translateY(5px);
     visibility: hidden;
   }
 }
 
 .bounce2 {
+  -webkit-animation: bounce2 11s infinite;
   animation: bounce2 11s infinite;
 }
 
-@keyframes bounce2 {
+@-webkit-keyframes bounce2 {
   0%, 12.3% {
+    -webkit-transform: translateY(5px);
     transform: translateY(5px);
     visibility: hidden;
   }
   12.4% {
+    -webkit-transform: translateY(8px);
     transform: translateY(8px);
     visibility: visible;
   }
   14% {
+    -webkit-transform: translateY(15px);
     transform: translateY(15px);
     visibility: visible;
   }
 
   15% {
+    -webkit-transform: translateY(0);
     transform: translateY(0);
     visibility: visible;
   }
 
   20% {
+    -webkit-transform: translateY(0);
     transform: translateY(0);
     visibility: visible;
   }
   20.3%, 100% {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+    visibility: hidden;
+  }
+}
+
+@keyframes bounce2 {
+  0%, 12.3% {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+    visibility: hidden;
+  }
+  12.4% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+    visibility: visible;
+  }
+  14% {
+    -webkit-transform: translateY(15px);
+    transform: translateY(15px);
+    visibility: visible;
+  }
+
+  15% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    visibility: visible;
+  }
+
+  20% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    visibility: visible;
+  }
+  20.3%, 100% {
+    -webkit-transform: translateY(5px);
     transform: translateY(5px);
     visibility: hidden;
   }
 }
 
 .bounce3 {
+  -webkit-animation: bounce3 11s ease infinite;
   animation: bounce3 11s ease infinite;
 }
 
-@keyframes bounce3 {
+@-webkit-keyframes bounce3 {
   0%, 20.3% {
+    -webkit-transform: translateY(5px);
     transform: translateY(5px);
     visibility: hidden;
   }
   22% {
+    -webkit-transform: translateY(15px);
     transform: translateY(15px);
     visibility: visible;
   }
   23.3% {
+    -webkit-transform: translateY(0);
     transform: translateY(0);
     visibility: visible;
   }
   28% {
+    -webkit-transform: translateY(0);
     transform: translateY(0);
     visibility: visible;
   }
   28.3%, 100% {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+    visibility: hidden;
+  }
+}
+
+@keyframes bounce3 {
+  0%, 20.3% {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+    visibility: hidden;
+  }
+  22% {
+    -webkit-transform: translateY(15px);
+    transform: translateY(15px);
+    visibility: visible;
+  }
+  23.3% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    visibility: visible;
+  }
+  28% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    visibility: visible;
+  }
+  28.3%, 100% {
+    -webkit-transform: translateY(5px);
     transform: translateY(5px);
     visibility: hidden;
   }
 }
 
 .bounce4 {
+  -webkit-animation: bounce4 11s ease infinite;
   animation: bounce4 11s ease infinite;
 }
 
-@keyframes bounce4 {
+@-webkit-keyframes bounce4 {
   0%, 28.3% {
+    -webkit-transform: translateY(5px);
     transform: translateY(5px);
     visibility: hidden;
   }
   30% {
+    -webkit-transform: translateY(15px);
     transform: translateY(15px);
     visibility: visible;
   }
   31.3% {
+    -webkit-transform: translateY(0);
     transform: translateY(0);
     visibility: visible;
   }
   36% {
+    -webkit-transform: translateY(0);
     transform: translateY(0);
     visibility: visible;
   }
   36.3%, 100% {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+    visibility: hidden;
+  }
+}
+
+@keyframes bounce4 {
+  0%, 28.3% {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+    visibility: hidden;
+  }
+  30% {
+    -webkit-transform: translateY(15px);
+    transform: translateY(15px);
+    visibility: visible;
+  }
+  31.3% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    visibility: visible;
+  }
+  36% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    visibility: visible;
+  }
+  36.3%, 100% {
+    -webkit-transform: translateY(5px);
     transform: translateY(5px);
     visibility: hidden;
   }
 }
 
 .bounce5 {
+  -webkit-animation: bounce5 11s ease infinite;
   animation: bounce5 11s ease infinite;
 }
 
-@keyframes bounce5 {
+@-webkit-keyframes bounce5 {
   0%, 36.3% {
+    -webkit-transform: translateY(5px);
     transform: translateY(5px);
     visibility: hidden;
   }
   38% {
+    -webkit-transform: translateY(15px);
     transform: translateY(15px);
     visibility: visible;
   }
   39.3% {
+    -webkit-transform: translateY(0);
     transform: translateY(0);
     visibility: visible;
   }
   44% {
+    -webkit-transform: translateY(0);
     transform: translateY(0);
     visibility: visible;
   }
   44.3%, 100% {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+    visibility: hidden;
+  }
+}
+
+@keyframes bounce5 {
+  0%, 36.3% {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+    visibility: hidden;
+  }
+  38% {
+    -webkit-transform: translateY(15px);
+    transform: translateY(15px);
+    visibility: visible;
+  }
+  39.3% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    visibility: visible;
+  }
+  44% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    visibility: visible;
+  }
+  44.3%, 100% {
+    -webkit-transform: translateY(5px);
     transform: translateY(5px);
     visibility: hidden;
   }
 }
 
 .bounce6 {
+  -webkit-animation: bounce6 11s ease infinite;
   animation: bounce6 11s ease infinite;
 }
 
-@keyframes bounce6 {
+@-webkit-keyframes bounce6 {
   0%, 44.3% {
+    -webkit-transform: translateY(5px);
     transform: translateY(5px);
     visibility: hidden;
   }
   46% {
+    -webkit-transform: translateY(15px);
     transform: translateY(15px);
     visibility: visible;
   }
   47.3% {
+    -webkit-transform: translateY(0);
     transform: translateY(0);
     visibility: visible;
   }
   52% {
+    -webkit-transform: translateY(0);
     transform: translateY(0);
     visibility: visible;
   }
   52.3%, 100% {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+    visibility: hidden;
+  }
+}
+
+@keyframes bounce6 {
+  0%, 44.3% {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+    visibility: hidden;
+  }
+  46% {
+    -webkit-transform: translateY(15px);
+    transform: translateY(15px);
+    visibility: visible;
+  }
+  47.3% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    visibility: visible;
+  }
+  52% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    visibility: visible;
+  }
+  52.3%, 100% {
+    -webkit-transform: translateY(5px);
     transform: translateY(5px);
     visibility: hidden;
   }
 }
 
 .bounce7 {
+  -webkit-animation: bounce7 11s ease infinite;
   animation: bounce7 11s ease infinite;
 }
 
-@keyframes bounce7 {
+@-webkit-keyframes bounce7 {
   0%, 52.3% {
+    -webkit-transform: translateY(5px);
     transform: translateY(5px);
     visibility: hidden;
   }
   54% {
+    -webkit-transform: translateY(15px);
     transform: translateY(15px);
     visibility: visible;
   }
   55.3% {
+    -webkit-transform: translateY(0);
     transform: translateY(0);
     visibility: visible;
   }
   60% {
+    -webkit-transform: translateY(0);
     transform: translateY(0);
     visibility: visible;
   }
   60.3%, 100% {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+    visibility: hidden;
+  }
+}
+
+@keyframes bounce7 {
+  0%, 52.3% {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+    visibility: hidden;
+  }
+  54% {
+    -webkit-transform: translateY(15px);
+    transform: translateY(15px);
+    visibility: visible;
+  }
+  55.3% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    visibility: visible;
+  }
+  60% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    visibility: visible;
+  }
+  60.3%, 100% {
+    -webkit-transform: translateY(5px);
     transform: translateY(5px);
     visibility: hidden;
   }
 }
 
 .bounce8 {
+  -webkit-animation: bounce8 11s ease infinite;
   animation: bounce8 11s ease infinite;
 }
 
-@keyframes bounce8 {
+@-webkit-keyframes bounce8 {
   0%, 60.3% {
+    -webkit-transform: translateY(5px);
     transform: translateY(5px);
     visibility: hidden;
   }
   62% {
+    -webkit-transform: translateY(15px);
     transform: translateY(15px);
     visibility: visible;
   }
   63.3% {
+    -webkit-transform: translateY(0);
     transform: translateY(0);
     visibility: visible;
   }
   68% {
+    -webkit-transform: translateY(0);
     transform: translateY(0);
     visibility: visible;
   }
   68.3%, 100% {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+    visibility: hidden;
+  }
+}
+
+@keyframes bounce8 {
+  0%, 60.3% {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+    visibility: hidden;
+  }
+  62% {
+    -webkit-transform: translateY(15px);
+    transform: translateY(15px);
+    visibility: visible;
+  }
+  63.3% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    visibility: visible;
+  }
+  68% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    visibility: visible;
+  }
+  68.3%, 100% {
+    -webkit-transform: translateY(5px);
     transform: translateY(5px);
     visibility: hidden;
   }
 }
 
 .bounce9 {
+  -webkit-animation: bounce9 11s ease infinite;
   animation: bounce9 11s ease infinite;
 }
 
-@keyframes bounce9 {
+@-webkit-keyframes bounce9 {
   0%, 68.3% {
+    -webkit-transform: translateY(5px);
     transform: translateY(5px);
     visibility: hidden;
   }
   70% {
+    -webkit-transform: translateY(15px);
     transform: translateY(15px);
     visibility: visible;
   }
   71.3% {
+    -webkit-transform: translateY(0);
     transform: translateY(0);
     visibility: visible;
   }
   89%, 100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    visibility: hidden;
+  }
+}
+
+@keyframes bounce9 {
+  0%, 68.3% {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+    visibility: hidden;
+  }
+  70% {
+    -webkit-transform: translateY(15px);
+    transform: translateY(15px);
+    visibility: visible;
+  }
+  71.3% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    visibility: visible;
+  }
+  89%, 100% {
+    -webkit-transform: translateY(0px);
     transform: translateY(0px);
     visibility: hidden;
   }
 }
 
 .disappear1 {
+  -webkit-animation: disappear1 11s ease infinite;
   animation: disappear1 11s ease infinite;
+}
+
+@-webkit-keyframes disappear1 {
+  0% {
+    visibility: visible;
+  }
+  75%, 100% {
+    visibility: hidden;
+  }
 }
 
 @keyframes disappear1 {
@@ -321,30 +643,68 @@ import DollarIcon from "@/assets/icons/dollar.svg";
 }
 
 .bounce10 {
+  -webkit-animation: bounce10 11s ease infinite;
   animation: bounce10 11s ease infinite;
 }
 
-@keyframes bounce10 {
+@-webkit-keyframes bounce10 {
   0%, 75% {
+    -webkit-transform: translateY(5px);
     transform: translateY(5px);
     visibility: hidden;
   }
   77% {
+    -webkit-transform: translateY(15px);
     transform: translateY(15px);
     visibility: visible;
   }
   78.2% {
+    -webkit-transform: translateY(0);
     transform: translateY(0);
     visibility: visible;
   }
   86.7%, 100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    visibility: hidden;
+  }
+}
+
+@keyframes bounce10 {
+  0%, 75% {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+    visibility: hidden;
+  }
+  77% {
+    -webkit-transform: translateY(15px);
+    transform: translateY(15px);
+    visibility: visible;
+  }
+  78.2% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    visibility: visible;
+  }
+  86.7%, 100% {
+    -webkit-transform: translateY(0px);
     transform: translateY(0px);
     visibility: hidden;
   }
 }
 
 .disappear2 {
+  -webkit-animation: disappear2 11s ease infinite;
   animation: disappear2 11s ease infinite;
+}
+
+@-webkit-keyframes disappear2 {
+  0% {
+    visibility: visible;
+  }
+  82%, 100% {
+    visibility: hidden;
+  }
 }
 
 @keyframes disappear2 {
@@ -357,30 +717,68 @@ import DollarIcon from "@/assets/icons/dollar.svg";
 }
 
 .bounce11 {
+  -webkit-animation: bounce11 11s ease infinite;
   animation: bounce11 11s ease infinite;
 }
 
-@keyframes bounce11 {
+@-webkit-keyframes bounce11 {
   0%, 82% {
+    -webkit-transform: translateY(5px);
     transform: translateY(5px);
     visibility: hidden;
   }
   84% {
+    -webkit-transform: translateY(15px);
     transform: translateY(15px);
     visibility: visible;
   }
   84.7% {
+    -webkit-transform: translateY(0);
     transform: translateY(0);
     visibility: visible;
   }
   91.4%, 100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    visibility: hidden;
+  }
+}
+
+@keyframes bounce11 {
+  0%, 82% {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+    visibility: hidden;
+  }
+  84% {
+    -webkit-transform: translateY(15px);
+    transform: translateY(15px);
+    visibility: visible;
+  }
+  84.7% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    visibility: visible;
+  }
+  91.4%, 100% {
+    -webkit-transform: translateY(0px);
     transform: translateY(0px);
     visibility: hidden;
   }
 }
 
 .switch1 {
+  -webkit-animation: switch1 11s ease infinite;
   animation: switch1 11s ease infinite;
+}
+
+@-webkit-keyframes switch1 {
+  0%, 86.7% {
+    visibility: hidden;
+  }
+  86.8%, 100% {
+    visibility: visible;
+  }
 }
 
 @keyframes switch1 {
@@ -393,7 +791,17 @@ import DollarIcon from "@/assets/icons/dollar.svg";
 }
 
 .switch2 {
+  -webkit-animation: switch2 11s ease infinite;
   animation: switch2 11s ease infinite;
+}
+
+@-webkit-keyframes switch2 {
+  0%, 89% {
+    visibility: hidden;
+  }
+  89.1%, 100% {
+    visibility: visible;
+  }
 }
 
 @keyframes switch2 {
@@ -406,7 +814,17 @@ import DollarIcon from "@/assets/icons/dollar.svg";
 }
 
 .switch3 {
+  -webkit-animation: switch3 11s ease infinite;
   animation: switch3 11s ease infinite;
+}
+
+@-webkit-keyframes switch3 {
+  0%, 91.4% {
+    visibility: hidden;
+  }
+  91.5%, 100% {
+    visibility: visible;
+  }
 }
 
 @keyframes switch3 {
