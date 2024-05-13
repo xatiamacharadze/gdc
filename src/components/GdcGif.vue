@@ -1,27 +1,13 @@
 <template>
   <div class="w-full flex sm:px-[15px] pt-[20px] sm:pt-[34px] pb-[21px] sm:pb-[35px]">
     <div class="slot-icon">
-      <img :src="GIcon" alt="g icon" class="disappear1">
-      <img :src="WatermelonIcon" alt="gothic d icon" class="bounce10">
-      <img :src="DollarIcon" alt="gothic d icon" class="switch1">
-
+      <logo-animated-icon v-for="icon in leftIcons" :icon="icon"/>
     </div>
     <div class="slot-icon ml-1 mr-1.5 middle">
-      <img :src="DIcon" alt="d icon" class="bounce1">
-      <img :src="GothicDIcon" alt="gothic d icon" class="bounce2">
-      <img :src="RobotIcon" alt="gothic d icon" class="bounce3">
-      <img :src="CoffeeIcon" alt="gothic d icon" class="bounce4">
-      <img :src="BeerIcon" alt="gothic d icon" class="bounce5">
-      <img :src="MicIcon" alt="gothic d icon" class="bounce6">
-      <img :src="SmileIcon" alt="gothic d icon" class="bounce7">
-      <img :src="EmailIcon" alt="gothic d icon" class="bounce8">
-      <img :src="WatermelonIcon" alt="gothic d icon" class="bounce9">
-      <img :src="DollarIcon" alt="gothic d icon" class="switch2">
+      <logo-animated-icon v-for="icon in middleIcons" :icon="icon"/>
     </div>
     <div class="slot-icon">
-      <img :src="CIcon" alt="c icon" class="disappear2">
-      <img :src="WatermelonIcon" alt="gothic d icon" class="bounce11">
-      <img :src="DollarIcon" alt="gothic d icon" class="switch3">
+      <logo-animated-icon v-for="icon in rightIcons" :icon="icon"/>
     </div>
   </div>
 </template>
@@ -39,20 +25,101 @@ import SmileIcon from "@/assets/icons/smile.svg";
 import EmailIcon from "@/assets/icons/email.svg";
 import WatermelonIcon from "@/assets/icons/watermelon.svg";
 import DollarIcon from "@/assets/icons/dollar.svg";
+import LogoAnimatedIcon from "@/components/LogoAnimatedIcon.vue";
+
+const shades = 12
+const opacity = 'opacity-5'
+
+const leftIcons = [
+  {
+    name: GIcon,
+    animation: 'disappear1'
+  },
+  {
+    name: WatermelonIcon,
+    animation: 'bounce10'
+  },
+  {
+    name: DollarIcon,
+    animation: 'switch1'
+  },
+]
+const middleIcons = [
+  {
+    name: DIcon,
+    animation: 'bounce1'
+  },
+  {
+    name: GothicDIcon,
+    animation: 'bounce2'
+  },
+  {
+    name: RobotIcon,
+    animation: 'bounce3'
+  },
+  {
+    name: CoffeeIcon,
+    animation: 'bounce4'
+  },
+  {
+    name: BeerIcon,
+    animation: 'bounce5'
+  },
+  {
+    name: MicIcon,
+    animation: 'bounce6'
+  },
+  {
+    name: SmileIcon,
+    animation: 'bounce7'
+  },
+  {
+    name: EmailIcon,
+    animation: 'bounce8'
+  },
+  {
+    name: WatermelonIcon,
+    animation: 'bounce9'
+  },
+  {
+    name: DollarIcon,
+    animation: 'switch2'
+  },
+]
+const rightIcons = [
+  {
+    name: CIcon,
+    animation: 'disappear2'
+  },
+  {
+    name: WatermelonIcon,
+    animation: 'bounce11'
+  },
+  {
+    name: DollarIcon,
+    animation: 'switch3'
+  },
+]
 </script>
 
 <style lang="scss">
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .middle {
   position: relative;
   &:before {
     @apply bg-black;
     content: '';
-    width: 24px;
-    height: 24px;
+    width: 13.5%;
+    padding-top: 13.5%;
     position: absolute;
-    bottom: 0;
-    right: -12px;
-
+    bottom: 6px;
+    right: -6%;
   }
 }
 
@@ -71,58 +138,110 @@ import DollarIcon from "@/assets/icons/dollar.svg";
 * Browsers: last 4 version
 */
 
+.gdelay-1 {
+  -webkit-animation-delay: 3ms !important;
+  animation-delay: 3ms !important;
+}
+.gdelay-2 {
+  -webkit-animation-delay: 6ms !important;
+  animation-delay: 6ms !important;
+}
+.gdelay-3 {
+  -webkit-animation-delay: 9ms !important;
+  animation-delay: 9ms !important;
+}
+.gdelay-4 {
+  -webkit-animation-delay: 12ms !important;
+  animation-delay: 12ms !important;
+}
+.gdelay-5 {
+  -webkit-animation-delay: 14ms !important;
+  animation-delay: 14ms !important;
+}
+.gdelay-6 {
+  -webkit-animation-delay: 17ms !important;
+  animation-delay: 17ms !important;
+}
+.gdelay-7 {
+  -webkit-animation-delay: 20ms !important;
+  animation-delay: 20ms !important;
+}
+.gdelay-8 {
+  -webkit-animation-delay: 23ms !important;
+  animation-delay: 23ms !important;
+}
+.gdelay-9 {
+  -webkit-animation-delay: 26ms !important;
+  animation-delay: 26ms !important;
+}
+.gdelay-10 {
+  -webkit-animation-delay: 29ms !important;
+  animation-delay: 29ms !important;
+}
+.gdelay-11 {
+  -webkit-animation-delay: 32ms !important;
+  animation-delay: 32ms !important;
+}
+.gdelay-12 {
+  -webkit-animation-delay: 35ms !important;
+  animation-delay: 35ms !important;
+}
+.gdelay-13 {
+  -webkit-animation-delay: 38ms !important;
+  animation-delay: 38ms !important;
+}
+.gdelay-14 {
+  -webkit-animation-delay: 41ms !important;
+  animation-delay: 41ms !important;
+}
+.gdelay-15 {
+  -webkit-animation-delay: 44ms !important;
+  animation-delay: 44ms !important;
+}
 
 .bounce1 {
-  -webkit-animation: bounce1 11s ease infinite;
-  animation: bounce1 11s ease infinite;
+  -webkit-animation: bounce1 11s linear infinite;
+  animation: bounce1 11s linear infinite;
 }
 
 @-webkit-keyframes bounce1 {
-  0%, 9.4% {
+  0%, 10.6% {
     -webkit-transform: translateY(0);
     transform: translateY(0);
     visibility: visible;
   }
-  10% {
-    -webkit-transform: translateY(-15px);
-    transform: translateY(-15px);
-  }
   11% {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+  12.2% {
     -webkit-transform: translateY(-5px);
     transform: translateY(-5px);
   }
-  12.2% {
-    -webkit-transform: translateY(5px);
-    transform: translateY(5px);
-  }
   12.3%, 100% {
-    -webkit-transform: translateY(5px);
-    transform: translateY(5px);
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
     visibility: hidden;
   }
 }
 
 @keyframes bounce1 {
-  0%, 9.4% {
+  0%, 10.6% {
     -webkit-transform: translateY(0);
     transform: translateY(0);
     visibility: visible;
   }
-  10% {
-    -webkit-transform: translateY(-15px);
-    transform: translateY(-15px);
-  }
   11% {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+  12.2% {
     -webkit-transform: translateY(-5px);
     transform: translateY(-5px);
   }
-  12.2% {
-    -webkit-transform: translateY(5px);
-    transform: translateY(5px);
-  }
   12.3%, 100% {
-    -webkit-transform: translateY(5px);
-    transform: translateY(5px);
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
     visibility: hidden;
   }
 }
@@ -134,8 +253,8 @@ import DollarIcon from "@/assets/icons/dollar.svg";
 
 @-webkit-keyframes bounce2 {
   0%, 12.3% {
-    -webkit-transform: translateY(5px);
-    transform: translateY(5px);
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
     visibility: hidden;
   }
   12.4% {
@@ -169,8 +288,8 @@ import DollarIcon from "@/assets/icons/dollar.svg";
 
 @keyframes bounce2 {
   0%, 12.3% {
-    -webkit-transform: translateY(5px);
-    transform: translateY(5px);
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
     visibility: hidden;
   }
   12.4% {
@@ -209,8 +328,8 @@ import DollarIcon from "@/assets/icons/dollar.svg";
 
 @-webkit-keyframes bounce3 {
   0%, 20.3% {
-    -webkit-transform: translateY(5px);
-    transform: translateY(5px);
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
     visibility: hidden;
   }
   22% {
@@ -237,8 +356,8 @@ import DollarIcon from "@/assets/icons/dollar.svg";
 
 @keyframes bounce3 {
   0%, 20.3% {
-    -webkit-transform: translateY(5px);
-    transform: translateY(5px);
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
     visibility: hidden;
   }
   22% {
@@ -270,8 +389,8 @@ import DollarIcon from "@/assets/icons/dollar.svg";
 
 @-webkit-keyframes bounce4 {
   0%, 28.3% {
-    -webkit-transform: translateY(5px);
-    transform: translateY(5px);
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
     visibility: hidden;
   }
   30% {
@@ -298,8 +417,8 @@ import DollarIcon from "@/assets/icons/dollar.svg";
 
 @keyframes bounce4 {
   0%, 28.3% {
-    -webkit-transform: translateY(5px);
-    transform: translateY(5px);
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
     visibility: hidden;
   }
   30% {
@@ -329,10 +448,11 @@ import DollarIcon from "@/assets/icons/dollar.svg";
   animation: bounce5 11s ease infinite;
 }
 
+
 @-webkit-keyframes bounce5 {
   0%, 36.3% {
-    -webkit-transform: translateY(5px);
-    transform: translateY(5px);
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
     visibility: hidden;
   }
   38% {
@@ -357,10 +477,11 @@ import DollarIcon from "@/assets/icons/dollar.svg";
   }
 }
 
+
 @keyframes bounce5 {
   0%, 36.3% {
-    -webkit-transform: translateY(5px);
-    transform: translateY(5px);
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
     visibility: hidden;
   }
   38% {
@@ -392,8 +513,8 @@ import DollarIcon from "@/assets/icons/dollar.svg";
 
 @-webkit-keyframes bounce6 {
   0%, 44.3% {
-    -webkit-transform: translateY(5px);
-    transform: translateY(5px);
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
     visibility: hidden;
   }
   46% {
@@ -420,8 +541,8 @@ import DollarIcon from "@/assets/icons/dollar.svg";
 
 @keyframes bounce6 {
   0%, 44.3% {
-    -webkit-transform: translateY(5px);
-    transform: translateY(5px);
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
     visibility: hidden;
   }
   46% {
@@ -451,10 +572,11 @@ import DollarIcon from "@/assets/icons/dollar.svg";
   animation: bounce7 11s ease infinite;
 }
 
+
 @-webkit-keyframes bounce7 {
   0%, 52.3% {
-    -webkit-transform: translateY(5px);
-    transform: translateY(5px);
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
     visibility: hidden;
   }
   54% {
@@ -479,10 +601,11 @@ import DollarIcon from "@/assets/icons/dollar.svg";
   }
 }
 
+
 @keyframes bounce7 {
   0%, 52.3% {
-    -webkit-transform: translateY(5px);
-    transform: translateY(5px);
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
     visibility: hidden;
   }
   54% {
@@ -512,10 +635,11 @@ import DollarIcon from "@/assets/icons/dollar.svg";
   animation: bounce8 11s ease infinite;
 }
 
+
 @-webkit-keyframes bounce8 {
   0%, 60.3% {
-    -webkit-transform: translateY(5px);
-    transform: translateY(5px);
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
     visibility: hidden;
   }
   62% {
@@ -540,10 +664,11 @@ import DollarIcon from "@/assets/icons/dollar.svg";
   }
 }
 
+
 @keyframes bounce8 {
   0%, 60.3% {
-    -webkit-transform: translateY(5px);
-    transform: translateY(5px);
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
     visibility: hidden;
   }
   62% {
@@ -573,10 +698,11 @@ import DollarIcon from "@/assets/icons/dollar.svg";
   animation: bounce9 11s ease infinite;
 }
 
+
 @-webkit-keyframes bounce9 {
   0%, 68.3% {
-    -webkit-transform: translateY(5px);
-    transform: translateY(5px);
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
     visibility: hidden;
   }
   70% {
@@ -596,10 +722,11 @@ import DollarIcon from "@/assets/icons/dollar.svg";
   }
 }
 
+
 @keyframes bounce9 {
   0%, 68.3% {
-    -webkit-transform: translateY(5px);
-    transform: translateY(5px);
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
     visibility: hidden;
   }
   70% {
@@ -624,6 +751,7 @@ import DollarIcon from "@/assets/icons/dollar.svg";
   animation: disappear1 11s ease infinite;
 }
 
+
 @-webkit-keyframes disappear1 {
   0% {
     visibility: visible;
@@ -632,6 +760,7 @@ import DollarIcon from "@/assets/icons/dollar.svg";
     visibility: hidden;
   }
 }
+
 
 @keyframes disappear1 {
   0% {
@@ -647,10 +776,11 @@ import DollarIcon from "@/assets/icons/dollar.svg";
   animation: bounce10 11s ease infinite;
 }
 
+
 @-webkit-keyframes bounce10 {
   0%, 75% {
-    -webkit-transform: translateY(5px);
-    transform: translateY(5px);
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
     visibility: hidden;
   }
   77% {
@@ -670,10 +800,11 @@ import DollarIcon from "@/assets/icons/dollar.svg";
   }
 }
 
+
 @keyframes bounce10 {
   0%, 75% {
-    -webkit-transform: translateY(5px);
-    transform: translateY(5px);
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
     visibility: hidden;
   }
   77% {
@@ -698,6 +829,7 @@ import DollarIcon from "@/assets/icons/dollar.svg";
   animation: disappear2 11s ease infinite;
 }
 
+
 @-webkit-keyframes disappear2 {
   0% {
     visibility: visible;
@@ -706,6 +838,7 @@ import DollarIcon from "@/assets/icons/dollar.svg";
     visibility: hidden;
   }
 }
+
 
 @keyframes disappear2 {
   0% {
@@ -721,10 +854,11 @@ import DollarIcon from "@/assets/icons/dollar.svg";
   animation: bounce11 11s ease infinite;
 }
 
+
 @-webkit-keyframes bounce11 {
   0%, 82% {
-    -webkit-transform: translateY(5px);
-    transform: translateY(5px);
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
     visibility: hidden;
   }
   84% {
@@ -744,10 +878,11 @@ import DollarIcon from "@/assets/icons/dollar.svg";
   }
 }
 
+
 @keyframes bounce11 {
   0%, 82% {
-    -webkit-transform: translateY(5px);
-    transform: translateY(5px);
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
     visibility: hidden;
   }
   84% {
@@ -772,6 +907,7 @@ import DollarIcon from "@/assets/icons/dollar.svg";
   animation: switch1 11s ease infinite;
 }
 
+
 @-webkit-keyframes switch1 {
   0%, 86.7% {
     visibility: hidden;
@@ -780,6 +916,7 @@ import DollarIcon from "@/assets/icons/dollar.svg";
     visibility: visible;
   }
 }
+
 
 @keyframes switch1 {
   0%, 86.7% {
@@ -795,6 +932,7 @@ import DollarIcon from "@/assets/icons/dollar.svg";
   animation: switch2 11s ease infinite;
 }
 
+
 @-webkit-keyframes switch2 {
   0%, 89% {
     visibility: hidden;
@@ -803,6 +941,7 @@ import DollarIcon from "@/assets/icons/dollar.svg";
     visibility: visible;
   }
 }
+
 
 @keyframes switch2 {
   0%, 89% {
