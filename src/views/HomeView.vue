@@ -20,7 +20,7 @@
 
 <script setup lang="ts">
 import GdcGif from "@/components/GdcGif.vue";
-import AudioFile from "@/assets/schumann.mp3";
+import AudioFile from "@/assets/audio/audio.mp3";
 </script>
 
 <script lang="ts">
@@ -29,7 +29,7 @@ export default {
   data() {
     return {
       desktopText1: "------------------------------------------------------------------------------------------------------------------ I'm building this page. Come back soon. ----------------- ------------------------------------------------------------------------------------------------------------------ AND DON'T WORRY. ---------------------------------------- I'M A LEGIT HUMAN BEING THAT DID STUFF IN REAL LIFE. ---- ------------------------------------------------------------------------------------------------------------------",
-      desktopText2: "------------------------------------------------------------------------------------------------------------------ YOU CAN SEE SOME STUFF ON ----------------------------------------------------  <a class=\"link\" href=\"\">instagram</a>  ------------------------------------------------------------------------------------------------------------------------------------------------------ Or you can check me out on  <a class=\"link\" href=\"\">linkedin</a>  ----- ----------------------- If you're serious like that. ---- ---------------------------------------------------------",
+      desktopText2: "------------------------------------------------------------------------------------------------------------------ YOU CAN SEE SOME STUFF ON ----------------------------------------------------  <a class=\"link\" href='https://www.instagram.com/tresbien.agency/' target='_blank'>instagram</a>  ------------------------------------------------------------------------------------------------------------------------------------------------------ Or you can check me out on  <a class=\"link\" href='https://www.linkedin.com/in/guillaumedchampeau/' target='_blank'>linkedin</a>  ----- ----------------------- If you're serious like that. ---- ---------------------------------------------------------",
       mobileText1: "-------------------------------------------\n" +
         "-------------------------------------------\n" +
         "I'm building this page. Come back soon. --- ------------------------------------------- -------------------------------------------\n" +
@@ -40,10 +40,10 @@ export default {
       mobileText2: "-------------------------------------------\n" +
         "-------------------------------------------\n" +
         "YOU CAN SEE SOME STUFF ON -----------------\n" +
-        "---------------------  <a class=\"link\" href=\"\">instagram</a>  ---------\n" +
+        "---------------------  <a class=\"link\" href='https://www.instagram.com/tresbien.agency/' target='_blank'>instagram</a>  ---------\n" +
         "-------------------------------------------\n" +
         "-------------------------------------------\n" +
-        "Or you can check me out on  <a class=\"link\" href=\"\">linkedin</a>  -----\n" +
+        "Or you can check me out on  <a class=\"link\" href='https://www.linkedin.com/in/guillaumedchampeau/' target='_blank'>linkedin</a>  -----\n" +
         "--------- If you're serious like that. ---- -------------------------------------------",
     }
   },
