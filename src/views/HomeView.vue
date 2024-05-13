@@ -157,6 +157,7 @@ export default {
     //font-size: 3.7vw;
     letter-spacing: -0.2vw;
     font-size: 3.74vw;
+    line-height: 1.19;
   }
 
   .link {
