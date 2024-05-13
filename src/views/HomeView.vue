@@ -64,9 +64,12 @@ export default {
 
 <style lang="scss">
 .text-div {
-  @apply uppercase font-bold text-[18px];
+  @apply uppercase text-[18px];
   letter-spacing: -0.7px;
   line-height: 1.12;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
 }
 
 .link {
@@ -77,7 +80,7 @@ export default {
   animation: bg-color-animation 11s ease infinite;
 }
 
-@keyframes bg-color-animation {
+@keyframes bg-color-animation1 {
   0%, 85.6% {
     @apply bg-white;
   }
@@ -134,11 +137,11 @@ export default {
 @media screen and (max-width: 639px) {
   .text-div {
     letter-spacing: -0.1vw;
-    font-size: 3.1vw;
+    font-size: 3.5vw;
   }
 
   .link {
-    @apply px-[2.3vw];
+    @apply px-[2vw];
   }
 }
 </style>
