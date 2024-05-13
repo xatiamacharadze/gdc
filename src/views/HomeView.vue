@@ -134,7 +134,7 @@ export default {
 @media screen and (max-width: 639px) {
   .text-div {
     letter-spacing: -0.1vw;
-    font-size: 3.5vw;
+    font-size: 3.1vw;
   }
 
   .link {
