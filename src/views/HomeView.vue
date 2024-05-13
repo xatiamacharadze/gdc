@@ -80,7 +80,7 @@ export default {
   animation: bg-color-animation 11s ease infinite;
 }
 
-@keyframes bg-color-animation1 {
+@keyframes bg-color-animation {
   0%, 85.6% {
     @apply bg-white;
   }
