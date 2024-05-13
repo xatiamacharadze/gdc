@@ -28,28 +28,43 @@ export default {
   name: 'HomeView',
   data() {
     return {
-      desktopText1: "------------------------------------------------------------------------------------------------------------------ I'm building this page. Come back soon. ----------------- ------------------------------------------------------------------------------------------------------------------ AND DON'T WORRY. ---------------------------------------- I'M A LEGIT HUMAN BEING THAT DID STUFF IN REAL LIFE. ---- ------------------------------------------------------------------------------------------------------------------",
-      desktopText2: "------------------------------------------------------------------------------------------------------------------ YOU CAN SEE SOME STUFF ON ----------------------------------------------------  <a class=\"link\" href='https://www.instagram.com/tresbien.agency/' target='_blank'>instagram</a>  ------------------------------------------------------------------------------------------------------------------------------------------------------ Or you can check me out on  <a class=\"link\" href='https://www.linkedin.com/in/guillaumedchampeau/' target='_blank'>linkedin</a>  ----- ----------------------- If you're serious like that. ---- ---------------------------------------------------------",
-      mobileText1: "-------------------------------------------\n" +
-        "-------------------------------------------\n" +
-        "I'm building this page. Come back soon. --- ------------------------------------------- -------------------------------------------\n" +
-        "AND DON'T WORRY. I'M A LEGIT HUMAN BEING --\n" +
-        "THAT DID STUFF IN REAL LIFE.---------------\n" +
-        "-------------------------------------------\n" +
+      desktopText1: "------------------------------------------------------------------------------------------------------------------" +
+        "I'm building this page. Come back soon. -----------------------------------------------------------------------------------------------------------------------------------" +
+        "AND DON'T WORRY. ----------------------------------------" +
+        "I'M A LEGIT HUMAN BEING THAT DID STUFF IN REAL LIFE. ----------------------------------------------------------------------------------------------------------------------",
+      desktopText2: "------------------------------------------------------------------------------------------------------------------" +
+        "YOU CAN SEE SOME STUFF ON -------------------------------" +
+        "--------------------- $igLink -----------------------" +
+        "---------------------------------------------------------" +
+        "---------------------------------------------------------" +
+        "------------- Or you can check me out on $linkedInLink ---------------------------- If you're serious like that. -------------------------------------------------------------",
+      mobileText1: "-------------------------------------------" +
+        "-------------------------------------------" +
+        "I'M BUILDING THIS PAGE. COME BACK SOON. -----------------------------------------------------------------------------------------" +
+        "AND DON'T WORRY. I'M A LEGIT HUMAN BEING --" +
+        "THAT DID STUFF IN REAL LIFE.---------------" +
+        "-------------------------------------------" +
         "-------------------------------------------",
-      mobileText2: "-------------------------------------------\n" +
-        "-------------------------------------------\n" +
-        "YOU CAN SEE SOME STUFF ON -----------------\n" +
-        "---------------------  <a class=\"link\" href='https://www.instagram.com/tresbien.agency/' target='_blank'>instagram</a>  ---------\n" +
-        "-------------------------------------------\n" +
-        "-------------------------------------------\n" +
-        "Or you can check me out on  <a class=\"link\" href='https://www.linkedin.com/in/guillaumedchampeau/' target='_blank'>linkedin</a>  -----\n" +
-        "--------- If you're serious like that. ---- -------------------------------------------",
+      mobileText2: "-------------------------------------------" +
+        "-------------------------------------------" +
+        "YOU CAN SEE SOME STUFF ON -----------------" +
+        "--------------------- $igLink ---------" +
+        "-------------------------------------------" +
+        "-------------------------------------------" +
+        "OR YOU CAN CHECK ME OUT ON $linkedInLink -----" +
+        "--------- IF YOU'RE SERIOUS LIKE THAT. -----------------------------------------------",
     }
   },
   mounted() {
+    const igLink = '<a class=\"link\" href=\'https://www.instagram.com/tresbien.agency/\' target=\'_blank\'>instagram</a>'
+    const linkedInLink = '<a class=\"link\" href=\'https://www.linkedin.com/in/guillaumedchampeau/\' target=\'_blank\'>linkedin</a>'
+    this.desktopText1 = this.desktopText1.replaceAll(' ', '<span class="opacity-0">-</span>')
+    this.desktopText2 = this.desktopText2.replaceAll(' ', '<span class="opacity-0">-</span>').replace('$igLink', igLink).replace('$linkedInLink', linkedInLink)
+    this.mobileText1 = this.mobileText1.replaceAll(' ', '<span class="opacity-0">-</span>')
+    this.mobileText2 = this.mobileText2.replaceAll(' ', '<span class="opacity-0">-</span>').replace('$igLink', igLink).replace('$linkedInLink', linkedInLink)
+
     const tryToPlay = setInterval(() => {
-      this.$refs.audio.play()
+      this.$refs.audio?.play()
         .then(() => {
           clearInterval(tryToPlay);
         })
@@ -136,8 +151,8 @@ export default {
 
 @media screen and (max-width: 639px) {
   .text-div {
-    letter-spacing: -0.1vw;
-    font-size: 3.5vw;
+    letter-spacing: -0.2vw;
+    font-size: 3.7vw;
   }
 
   .link {
