@@ -271,8 +271,8 @@ const rightIcons = [
     visibility: visible;
   }
   14% {
-    -webkit-transform: translateY(15px);
-    transform: translateY(15px);
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
     visibility: visible;
   }
 
@@ -306,8 +306,8 @@ const rightIcons = [
     visibility: visible;
   }
   14% {
-    -webkit-transform: translateY(15px);
-    transform: translateY(15px);
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
     visibility: visible;
   }
 
@@ -341,8 +341,8 @@ const rightIcons = [
     visibility: hidden;
   }
   22% {
-    -webkit-transform: translateY(15px);
-    transform: translateY(15px);
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
     visibility: visible;
   }
   23.3% {
@@ -369,8 +369,8 @@ const rightIcons = [
     visibility: hidden;
   }
   22% {
-    -webkit-transform: translateY(15px);
-    transform: translateY(15px);
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
     visibility: visible;
   }
   23.3% {
@@ -402,8 +402,8 @@ const rightIcons = [
     visibility: hidden;
   }
   30% {
-    -webkit-transform: translateY(15px);
-    transform: translateY(15px);
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
     visibility: visible;
   }
   31.3% {
@@ -430,8 +430,8 @@ const rightIcons = [
     visibility: hidden;
   }
   30% {
-    -webkit-transform: translateY(15px);
-    transform: translateY(15px);
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
     visibility: visible;
   }
   31.3% {
@@ -464,8 +464,8 @@ const rightIcons = [
     visibility: hidden;
   }
   38% {
-    -webkit-transform: translateY(15px);
-    transform: translateY(15px);
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
     visibility: visible;
   }
   39.3% {
@@ -493,8 +493,8 @@ const rightIcons = [
     visibility: hidden;
   }
   38% {
-    -webkit-transform: translateY(15px);
-    transform: translateY(15px);
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
     visibility: visible;
   }
   39.3% {
@@ -526,8 +526,8 @@ const rightIcons = [
     visibility: hidden;
   }
   46% {
-    -webkit-transform: translateY(15px);
-    transform: translateY(15px);
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
     visibility: visible;
   }
   47.3% {
@@ -554,8 +554,8 @@ const rightIcons = [
     visibility: hidden;
   }
   46% {
-    -webkit-transform: translateY(15px);
-    transform: translateY(15px);
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
     visibility: visible;
   }
   47.3% {
@@ -588,8 +588,8 @@ const rightIcons = [
     visibility: hidden;
   }
   54% {
-    -webkit-transform: translateY(15px);
-    transform: translateY(15px);
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
     visibility: visible;
   }
   55.3% {
@@ -617,8 +617,8 @@ const rightIcons = [
     visibility: hidden;
   }
   54% {
-    -webkit-transform: translateY(15px);
-    transform: translateY(15px);
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
     visibility: visible;
   }
   55.3% {
@@ -651,8 +651,8 @@ const rightIcons = [
     visibility: hidden;
   }
   62% {
-    -webkit-transform: translateY(15px);
-    transform: translateY(15px);
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
     visibility: visible;
   }
   63.3% {
@@ -680,8 +680,8 @@ const rightIcons = [
     visibility: hidden;
   }
   62% {
-    -webkit-transform: translateY(15px);
-    transform: translateY(15px);
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
     visibility: visible;
   }
   63.3% {
@@ -714,8 +714,8 @@ const rightIcons = [
     visibility: hidden;
   }
   70% {
-    -webkit-transform: translateY(15px);
-    transform: translateY(15px);
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
     visibility: visible;
   }
   71.3% {
@@ -738,8 +738,8 @@ const rightIcons = [
     visibility: hidden;
   }
   70% {
-    -webkit-transform: translateY(15px);
-    transform: translateY(15px);
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
     visibility: visible;
   }
   71.3% {
@@ -792,8 +792,8 @@ const rightIcons = [
     visibility: hidden;
   }
   77% {
-    -webkit-transform: translateY(15px);
-    transform: translateY(15px);
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
     visibility: visible;
   }
   78.2% {
@@ -816,8 +816,8 @@ const rightIcons = [
     visibility: hidden;
   }
   77% {
-    -webkit-transform: translateY(15px);
-    transform: translateY(15px);
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
     visibility: visible;
   }
   78.2% {
@@ -870,8 +870,8 @@ const rightIcons = [
     visibility: hidden;
   }
   84% {
-    -webkit-transform: translateY(15px);
-    transform: translateY(15px);
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
     visibility: visible;
   }
   84.7% {
@@ -894,8 +894,8 @@ const rightIcons = [
     visibility: hidden;
   }
   84% {
-    -webkit-transform: translateY(15px);
-    transform: translateY(15px);
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
     visibility: visible;
   }
   84.7% {
