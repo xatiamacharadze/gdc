@@ -33,15 +33,18 @@ const opacity = 'opacity-5'
 const leftIcons = [
   {
     name: GIcon,
-    animation: 'disappear1'
+    animation: 'disappear1',
+    motionBlur: false,
   },
   {
     name: WatermelonIcon,
-    animation: 'bounce10'
+    animation: 'bounce10',
+    motionBlur: false,
   },
   {
     name: DollarIcon,
-    animation: 'switch1'
+    animation: 'switch1',
+    motionBlur: false,
   },
 ]
 const middleIcons = [
@@ -79,25 +82,30 @@ const middleIcons = [
   },
   {
     name: WatermelonIcon,
-    animation: 'bounce9'
+    animation: 'bounce9',
+    motionBlur: false,
   },
   {
     name: DollarIcon,
-    animation: 'switch2'
+    animation: 'switch2',
+    motionBlur: false,
   },
 ]
 const rightIcons = [
   {
     name: CIcon,
-    animation: 'disappear2'
+    animation: 'disappear2',
+    motionBlur: false,
   },
   {
     name: WatermelonIcon,
-    animation: 'bounce11'
+    animation: 'bounce11',
+    motionBlur: false,
   },
   {
     name: DollarIcon,
-    animation: 'switch3'
+    animation: 'switch3',
+    motionBlur: false,
   },
 ]
 </script>

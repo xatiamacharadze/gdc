@@ -10,13 +10,16 @@ const { icon } = defineProps({
 
 <template>
   <img :src="icon.name" alt="d icon" :class="icon.animation">
-  <img v-for="i in 12"
-       :key="icon.name + i"
-       :class="`gdelay-${i + 1} ${icon.animation}`"
-       :src="icon.name"
-       :alt="`${icon.name} icon`"
-       class="opacity-5"
-  >
+  <template v-if="icon.motionBlur !== false">
+    <img v-for="i in 12"
+         :key="icon.name + i"
+         :class="`gdelay-${i + 1} ${icon.animation}`"
+         :src="icon.name"
+         :alt="`${icon.name} icon`"
+         class="opacity-5"
+    >
+  </template>
+
 </template>
 
 <style scoped lang="scss">
