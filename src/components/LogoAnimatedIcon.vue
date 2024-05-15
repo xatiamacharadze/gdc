@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { getWindow } from "../helpers/getWindow.js";
+import {computed} from "vue";
+
 const { icon } = defineProps({
   icon: {
     type: Object,
@@ -6,12 +9,16 @@ const { icon } = defineProps({
   },
 });
 
+const { windowWidth } = getWindow();
+
+const motionBlurCount = computed(() => windowWidth.value > 640 ? 12 : 8)
+
 </script>
 
 <template>
   <img :src="icon.name" alt="d icon" :class="icon.animation">
   <template v-if="icon.motionBlur !== false">
-    <img v-for="i in 12"
+    <img v-for="i in motionBlurCount"
          :key="icon.name + i"
          :class="`gdelay-${i + 1} ${icon.animation}`"
          :src="icon.name"
