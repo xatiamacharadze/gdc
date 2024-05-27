@@ -1,20 +1,27 @@
 <template>
-  <div class="gdc-container h-full flex flex-col justify-center items-center bg-color-animation">
-    <div class="w-full sm:w-[580px]">
-      <div class="text-div">
-        <div class="hidden sm:block" v-html="desktopText1"></div>
-        <div class="sm:hidden whitespace-nowrap" v-html="mobileText1"></div>
-      </div>
-      <gdc-gif/>
-      <div class="text-div">
-        <div class="hidden sm:block" v-html="desktopText2"></div>
-        <div class="sm:hidden whitespace-nowrap" v-html="mobileText2"></div>
-      </div>
+  <div class="gdc-container h-full flex flex-col justify-center items-center" :class="initialScreenVisible ? '' : 'bg-color-animation'">
+    <div v-if="initialScreenVisible" class="bg-black w-full h-full fixed top-0 left-0 flex items-center justify-center z-20"
+         @click="hideInitialScreen">
+      <p class="xs:hover:italic text-white cursor-pointer">ENTER</p>
     </div>
 
-    <audio class="hidden" ref="audio" controls loop>
-      <source :src="AudioFile" type="audio/mpeg">
-    </audio>
+    <template v-else>
+      <div class="w-full sm:w-[580px]">
+        <div class="text-div">
+          <div class="hidden sm:block" v-html="desktopText1"></div>
+          <div class="sm:hidden whitespace-nowrap" v-html="mobileText1"></div>
+        </div>
+        <gdc-gif/>
+        <div class="text-div">
+          <div class="hidden sm:block" v-html="desktopText2"></div>
+          <div class="sm:hidden whitespace-nowrap" v-html="mobileText2"></div>
+        </div>
+      </div>
+
+      <audio class="hidden" ref="audio" controls loop :muted="!sound">
+        <source :src="AudioFile" type="audio/mpeg">
+      </audio>
+    </template>
   </div>
 </template>
 
@@ -28,17 +35,29 @@ export default {
   name: 'HomeView',
   data() {
     return {
-      desktopText1: "------------------------------------------------------------------------------------------------------------------" +
+      initialScreenVisible: true,
+      sound: true,
+      soundTexts: {
+        desktopOn: `<span class="opacity-0 on">-</span><span class="xs:hover:italic cursor-pointer">sound on</span><span class="opacity-0">-</span>-`,
+        desktopOff: `<span class="opacity-0 off">-</span><span class="xs:hover:italic cursor-pointer">sound off</span><span class="opacity-0">-</span>`,
+        mobileOn: `-<span class="opacity-0">-</span><span class="xs:hover:italic cursor-pointer">sound on</span>`,
+        mobileOff: `<span class="opacity-0">-</span><span class="xs:hover:italic cursor-pointer">sound off</span>`,
+      },
+      desktopText1:
+        "-------------------------------------------$sound------------------------------------------------------------" +
         "I'm building this page. Come back soon. -----------------------------------------------------------------------------------------------------------------------------------" +
         "AND DON'T WORRY. ----------------------------------------" +
         "I'M A LEGIT HUMAN BEING THAT DID STUFF IN REAL LIFE. ----------------------------------------------------------------------------------------------------------------------",
       desktopText2: "------------------------------------------------------------------------------------------------------------------" +
         "YOU CAN SEE SOME STUFF ON -------------------------------" +
-        "--------------------- $igLink -----------------------" +
+        "---------------------- $igLink ------------------------" +
         "---------------------------------------------------------" +
         "---------------------------------------------------------" +
-        "------------- Or you can check me out on $linkedInLink ---------------------------- If you're serious like that. -------------------------------------------------------------",
-      mobileText1: "-------------------------------------------<br/>" +
+        "-------------- Or you can check me out on $linkedInLink ----------------------------- If you're serious like that. -------------------------------------------------------------",
+      mobileText1:
+        "---------------------------------$sound<br/>" +
+        "-------------------------------------------<br/>" +
+        "-------------------------------------------<br/>" +
         "-------------------------------------------<br/>" +
         "I'M BUILDING THIS PAGE. COME BACK SOON. ---<br/>" +
         "-------------------------------------------<br/>" +
@@ -50,19 +69,20 @@ export default {
       mobileText2: "-------------------------------------------<br/>" +
         "-------------------------------------------<br/>" +
         "YOU CAN SEE SOME STUFF ON -----------------<br/>" +
-        "--------------------- $igLink ---------<br/>" +
+        "---------------------- $igLink ----------<br/>" +
         "-------------------------------------------<br/>" +
         "-------------------------------------------<br/>" +
-        "OR YOU CAN CHECK ME OUT ON $linkedInLink -----<br/>" +
+        "OR YOU CAN CHECK ME OUT ON $linkedInLink -------<br/>" +
         "--------- IF YOU'RE SERIOUS LIKE THAT. ----<br/>-------------------------------------------<br/>",
     }
   },
   mounted() {
     const igLink = '<a class=\"link\" href=\'https://www.instagram.com/tresbien.agency/\' target=\'_blank\'>instagram</a>'
     const linkedInLink = '<a class=\"link\" href=\'https://www.linkedin.com/in/guillaumedchampeau/\' target=\'_blank\'>linkedin</a>'
-    this.desktopText1 = this.desktopText1.replaceAll(' ', '<span class="opacity-0">-</span>')
+    const sound = `<span class="sound">${this.soundText}</span>`
+    this.desktopText1 = this.desktopText1.replaceAll(' ', '<span class="opacity-0">-</span>').replace('$sound', sound)
     this.desktopText2 = this.desktopText2.replaceAll(' ', '<span class="opacity-0">-</span>').replace('$igLink', igLink).replace('$linkedInLink', linkedInLink)
-    this.mobileText1 = this.mobileText1.replaceAll(' ', '<span class="opacity-0">-</span>')
+    this.mobileText1 = this.mobileText1.replaceAll(' ', '<span class="opacity-0">-</span>').replace('$sound', sound)
     this.mobileText2 = this.mobileText2.replaceAll(' ', '<span class="opacity-0">-</span>').replace('$igLink', igLink).replace('$linkedInLink', linkedInLink)
 
     const tryToPlay = setInterval(() => {
@@ -74,6 +94,26 @@ export default {
           console.info('User has not interacted with document yet.');
         });
     }, 1000);
+  },
+  computed: {
+    soundText() {
+      return window.innerWidth > 640 ? this.soundTexts[!this.sound ? 'desktopOn' : 'desktopOff'] : this.soundTexts[!this.sound ? 'mobileOn' : 'mobileOff']
+    }
+  },
+  methods: {
+    hideInitialScreen() {
+      this.initialScreenVisible = !this.initialScreenVisible
+      this.$nextTick(() => {
+        const soundClick = () => {
+          this.sound = !this.sound
+          let soundTexts = document.getElementsByClassName("sound");
+          Array.from(soundTexts).forEach((st) => st.innerHTML = this.soundText);
+        };
+
+        let soundTexts = document.getElementsByClassName("sound");
+        Array.from(soundTexts).forEach((e) => e.addEventListener('click', soundClick));
+      })
+    }
   }
 };
 
@@ -90,7 +130,7 @@ export default {
 }
 
 .link {
-  @apply bg-black text-white px-[10.3px] py-[1px] rounded-[4px] md:hover:text-orange;
+  @apply md:hover:italic;
 }
 
 .bg-color-animation {
@@ -158,10 +198,6 @@ export default {
     letter-spacing: -0.2vw;
     font-size: 3.74vw;
     line-height: 1.19;
-  }
-
-  .link {
-    @apply px-[2vw];
   }
 }
 </style>
