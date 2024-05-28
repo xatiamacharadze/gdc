@@ -38,10 +38,10 @@ export default {
       initialScreenVisible: true,
       sound: true,
       soundTexts: {
-        desktopOn: `<span class="opacity-0 on">-</span><span class="xs:hover:italic cursor-pointer">sound on</span><span class="opacity-0">-</span>-`,
-        desktopOff: `<span class="opacity-0 off">-</span><span class="xs:hover:italic cursor-pointer">sound off</span><span class="opacity-0">-</span>`,
-        mobileOn: `-<span class="opacity-0">-</span><span class="xs:hover:italic cursor-pointer">sound on</span>`,
-        mobileOff: `<span class="opacity-0">-</span><span class="xs:hover:italic cursor-pointer">sound off</span>`,
+        desktopOn: `<span class="opacity-0 on">-</span><span class="italic md:not-italic md:hover:italic cursor-pointer">sound on</span><span class="opacity-0">-</span>-`,
+        desktopOff: `<span class="opacity-0 off">-</span><span class="italic md:not-italic md:hover:italic cursor-pointer">sound off</span><span class="opacity-0">-</span>`,
+        mobileOn: `-<span class="opacity-0">-</span><span class="italic md:not-italic md:hover:italic cursor-pointer">sound on</span>`,
+        mobileOff: `<span class="opacity-0">-</span><span class="italic md:not-italic md:hover:italic cursor-pointer">sound off</span>`,
       },
       desktopText1:
         "-------------------------------------------$sound------------------------------------------------------------" +
@@ -77,14 +77,15 @@ export default {
     }
   },
   mounted() {
-    const igLink = '<a class=\"link\" href=\'https://www.instagram.com/tresbien.agency/\' target=\'_blank\'>instagram</a>'
-    const linkedInLink = '<a class=\"link\" href=\'https://www.linkedin.com/in/guillaumedchampeau/\' target=\'_blank\'>linkedin</a>'
-    const sound = `<span class="sound">${this.soundText}</span>`
+    const igLink = '<a class="link" href=\'https://www.instagram.com/tresbien.agency/\' target=\'_blank\'>instagram</a>'
+    const linkedInLink = '<a class="link" href=\'https://www.linkedin.com/in/guillaumedchampeau/\' target=\'_blank\'>linkedin</a>'
+    const sound = `<span class="sound">${this.soundText()}</span>`
     this.desktopText1 = this.desktopText1.replaceAll(' ', '<span class="opacity-0">-</span>').replace('$sound', sound)
     this.desktopText2 = this.desktopText2.replaceAll(' ', '<span class="opacity-0">-</span>').replace('$igLink', igLink).replace('$linkedInLink', linkedInLink)
     this.mobileText1 = this.mobileText1.replaceAll(' ', '<span class="opacity-0">-</span>').replace('$sound', sound)
     this.mobileText2 = this.mobileText2.replaceAll(' ', '<span class="opacity-0">-</span>').replace('$igLink', igLink).replace('$linkedInLink', linkedInLink)
 
+    window.addEventListener('resize', this.updateSoundText)
     const tryToPlay = setInterval(() => {
       this.$refs.audio?.play()
         .then(() => {
@@ -95,19 +96,20 @@ export default {
         });
     }, 1000);
   },
-  computed: {
+  methods: {
     soundText() {
       return window.innerWidth > 640 ? this.soundTexts[!this.sound ? 'desktopOn' : 'desktopOff'] : this.soundTexts[!this.sound ? 'mobileOn' : 'mobileOff']
-    }
-  },
-  methods: {
+    },
+    updateSoundText() {
+      let soundTexts = document.getElementsByClassName("sound");
+      Array.from(soundTexts).forEach((st) => st.innerHTML = this.soundText());
+    },
     hideInitialScreen() {
       this.initialScreenVisible = !this.initialScreenVisible
       this.$nextTick(() => {
         const soundClick = () => {
           this.sound = !this.sound
-          let soundTexts = document.getElementsByClassName("sound");
-          Array.from(soundTexts).forEach((st) => st.innerHTML = this.soundText);
+          this.updateSoundText()
         };
 
         let soundTexts = document.getElementsByClassName("sound");
@@ -130,7 +132,7 @@ export default {
 }
 
 .link {
-  @apply md:hover:italic;
+  @apply italic md:not-italic md:hover:italic;
 }
 
 .text-enter-animation {
