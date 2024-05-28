@@ -11,7 +11,8 @@ const { icon } = defineProps({
 
 const { windowWidth } = getWindow();
 
-const motionBlurCount = computed(() => windowWidth.value > 640 ? 12 : 8)
+// const motionBlurCount = computed(() => windowWidth.value > 640 ? 12 : 8)
+const motionBlurCount = 0
 
 </script>
 

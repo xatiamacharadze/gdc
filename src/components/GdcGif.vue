@@ -27,9 +27,6 @@ import WatermelonIcon from "@/assets/icons/watermelon.svg";
 import DollarIcon from "@/assets/icons/dollar.svg";
 import LogoAnimatedIcon from "@/components/LogoAnimatedIcon.vue";
 
-const shades = 12
-const opacity = 'opacity-5'
-
 const leftIcons = [
   {
     name: GIcon,
@@ -211,7 +208,6 @@ const rightIcons = [
   -webkit-animation: bounce1 11s linear infinite;
   animation: bounce1 11s linear infinite;
 }
-
 @-webkit-keyframes bounce1 {
   0%, 10.6% {
     -webkit-transform: translateY(0);
@@ -232,7 +228,6 @@ const rightIcons = [
     visibility: hidden;
   }
 }
-
 @keyframes bounce1 {
   0%, 10.6% {
     -webkit-transform: translateY(0);
@@ -258,7 +253,6 @@ const rightIcons = [
   -webkit-animation: bounce2 11s infinite;
   animation: bounce2 11s infinite;
 }
-
 @-webkit-keyframes bounce2 {
   0%, 12.3% {
     -webkit-transform: translateY(-5px);
@@ -293,7 +287,6 @@ const rightIcons = [
     visibility: hidden;
   }
 }
-
 @keyframes bounce2 {
   0%, 12.3% {
     -webkit-transform: translateY(-5px);
@@ -333,7 +326,6 @@ const rightIcons = [
   -webkit-animation: bounce3 11s ease infinite;
   animation: bounce3 11s ease infinite;
 }
-
 @-webkit-keyframes bounce3 {
   0%, 20.3% {
     -webkit-transform: translateY(-10px);
@@ -361,7 +353,6 @@ const rightIcons = [
     visibility: hidden;
   }
 }
-
 @keyframes bounce3 {
   0%, 20.3% {
     -webkit-transform: translateY(-10px);
@@ -394,7 +385,6 @@ const rightIcons = [
   -webkit-animation: bounce4 11s ease infinite;
   animation: bounce4 11s ease infinite;
 }
-
 @-webkit-keyframes bounce4 {
   0%, 28.3% {
     -webkit-transform: translateY(-10px);
@@ -422,7 +412,6 @@ const rightIcons = [
     visibility: hidden;
   }
 }
-
 @keyframes bounce4 {
   0%, 28.3% {
     -webkit-transform: translateY(-10px);
@@ -455,8 +444,6 @@ const rightIcons = [
   -webkit-animation: bounce5 11s ease infinite;
   animation: bounce5 11s ease infinite;
 }
-
-
 @-webkit-keyframes bounce5 {
   0%, 36.3% {
     -webkit-transform: translateY(-10px);
@@ -484,8 +471,6 @@ const rightIcons = [
     visibility: hidden;
   }
 }
-
-
 @keyframes bounce5 {
   0%, 36.3% {
     -webkit-transform: translateY(-10px);
@@ -518,7 +503,6 @@ const rightIcons = [
   -webkit-animation: bounce6 11s ease infinite;
   animation: bounce6 11s ease infinite;
 }
-
 @-webkit-keyframes bounce6 {
   0%, 44.3% {
     -webkit-transform: translateY(-10px);
@@ -546,7 +530,6 @@ const rightIcons = [
     visibility: hidden;
   }
 }
-
 @keyframes bounce6 {
   0%, 44.3% {
     -webkit-transform: translateY(-10px);
@@ -579,8 +562,6 @@ const rightIcons = [
   -webkit-animation: bounce7 11s ease infinite;
   animation: bounce7 11s ease infinite;
 }
-
-
 @-webkit-keyframes bounce7 {
   0%, 52.3% {
     -webkit-transform: translateY(-10px);
@@ -608,8 +589,6 @@ const rightIcons = [
     visibility: hidden;
   }
 }
-
-
 @keyframes bounce7 {
   0%, 52.3% {
     -webkit-transform: translateY(-10px);
@@ -642,8 +621,6 @@ const rightIcons = [
   -webkit-animation: bounce8 11s ease infinite;
   animation: bounce8 11s ease infinite;
 }
-
-
 @-webkit-keyframes bounce8 {
   0%, 60.3% {
     -webkit-transform: translateY(-10px);
@@ -671,8 +648,6 @@ const rightIcons = [
     visibility: hidden;
   }
 }
-
-
 @keyframes bounce8 {
   0%, 60.3% {
     -webkit-transform: translateY(-10px);
@@ -705,8 +680,6 @@ const rightIcons = [
   -webkit-animation: bounce9 11s ease infinite;
   animation: bounce9 11s ease infinite;
 }
-
-
 @-webkit-keyframes bounce9 {
   0%, 68.3% {
     -webkit-transform: translateY(-10px);
@@ -729,8 +702,6 @@ const rightIcons = [
     visibility: hidden;
   }
 }
-
-
 @keyframes bounce9 {
   0%, 68.3% {
     -webkit-transform: translateY(-10px);
@@ -758,8 +729,6 @@ const rightIcons = [
   -webkit-animation: disappear1 11s ease infinite;
   animation: disappear1 11s ease infinite;
 }
-
-
 @-webkit-keyframes disappear1 {
   0% {
     visibility: visible;
@@ -768,8 +737,6 @@ const rightIcons = [
     visibility: hidden;
   }
 }
-
-
 @keyframes disappear1 {
   0% {
     visibility: visible;
@@ -783,8 +750,6 @@ const rightIcons = [
   -webkit-animation: bounce10 11s ease infinite;
   animation: bounce10 11s ease infinite;
 }
-
-
 @-webkit-keyframes bounce10 {
   0%, 75% {
     -webkit-transform: translateY(-10px);
@@ -807,8 +772,6 @@ const rightIcons = [
     visibility: hidden;
   }
 }
-
-
 @keyframes bounce10 {
   0%, 75% {
     -webkit-transform: translateY(-10px);
@@ -836,8 +799,6 @@ const rightIcons = [
   -webkit-animation: disappear2 11s ease infinite;
   animation: disappear2 11s ease infinite;
 }
-
-
 @-webkit-keyframes disappear2 {
   0% {
     visibility: visible;
@@ -846,8 +807,6 @@ const rightIcons = [
     visibility: hidden;
   }
 }
-
-
 @keyframes disappear2 {
   0% {
     visibility: visible;
@@ -861,8 +820,6 @@ const rightIcons = [
   -webkit-animation: bounce11 11s ease infinite;
   animation: bounce11 11s ease infinite;
 }
-
-
 @-webkit-keyframes bounce11 {
   0%, 82% {
     -webkit-transform: translateY(-10px);
@@ -885,8 +842,6 @@ const rightIcons = [
     visibility: hidden;
   }
 }
-
-
 @keyframes bounce11 {
   0%, 82% {
     -webkit-transform: translateY(-10px);
@@ -914,8 +869,6 @@ const rightIcons = [
   -webkit-animation: switch1 11s ease infinite;
   animation: switch1 11s ease infinite;
 }
-
-
 @-webkit-keyframes switch1 {
   0%, 86.7% {
     visibility: hidden;
@@ -924,8 +877,6 @@ const rightIcons = [
     visibility: visible;
   }
 }
-
-
 @keyframes switch1 {
   0%, 86.7% {
     visibility: hidden;
@@ -939,8 +890,6 @@ const rightIcons = [
   -webkit-animation: switch2 11s ease infinite;
   animation: switch2 11s ease infinite;
 }
-
-
 @-webkit-keyframes switch2 {
   0%, 89% {
     visibility: hidden;
@@ -949,8 +898,6 @@ const rightIcons = [
     visibility: visible;
   }
 }
-
-
 @keyframes switch2 {
   0%, 89% {
     visibility: hidden;
@@ -964,7 +911,6 @@ const rightIcons = [
   -webkit-animation: switch3 11s ease infinite;
   animation: switch3 11s ease infinite;
 }
-
 @-webkit-keyframes switch3 {
   0%, 91.4% {
     visibility: hidden;
@@ -973,7 +919,6 @@ const rightIcons = [
     visibility: visible;
   }
 }
-
 @keyframes switch3 {
   0%, 91.4% {
     visibility: hidden;
