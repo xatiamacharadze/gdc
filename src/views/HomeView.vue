@@ -2,7 +2,7 @@
   <div class="gdc-container h-full flex flex-col justify-center items-center" :class="initialScreenVisible ? '' : 'bg-color-animation'">
     <div v-if="initialScreenVisible" class="bg-black w-full h-full fixed top-0 left-0 flex items-center justify-center z-20"
          @click="hideInitialScreen">
-      <p class="xs:hover:italic text-white cursor-pointer text-enter-animation">ENTER</p>
+      <p class="xs:hover:italic text-white cursor-pointer text-enter-animation p-10">ENTER</p>
     </div>
 
     <template v-else>
